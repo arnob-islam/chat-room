@@ -1,0 +1,32 @@
+section.my__admin__users.lsjweslfjw {
+  margin-top: 2rem;
+}
+.single_user_link {
+  display: flex;
+  gap: 3rem;
+  text-decoration: none;
+  align-items: center;
+  color: #404040;
+}
+
+.main__wrapper_users.sljfwsdfw {
+  width: 80%;
+  margin: auto;
+}
+
+.img_container__ {
+  img {
+    width: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+.per_single {
+  padding: 0.5rem 1rem;
+  background: white;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  &:hover {
+    background: whitesmoke;
+  }
+}

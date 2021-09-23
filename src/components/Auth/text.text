@@ -1,0 +1,61 @@
+var provider = new firebase.auth.GoogleAuthProvider();
+firebase
+    .auth()
+    .signInWithPopup(provider)
+    .then((res) => {
+        IsTheUserExist(res.user.email).then(isExist => {
+            console.log(isExist);
+            if (!isExist) {
+                deleteUser(res.user).then(delet => {
+                    console.log(delet);
+                })
+            }
+
+            if (isExist) {
+                location.go(0)
+            }
+        })
+
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+
+
+
+useEffect(() => {
+    const subscribe = auth.onAuthStateChanged(user => {
+        console.log(user);
+        // setTimeout(() => {
+        if (user) {
+            let detailscarryer = []
+            db.collection('users').get().then(snapshot => {
+                snapshot.forEach((doc) => {
+                    detailscarryer.push(doc.data().mail)
+                });
+                console.log(detailscarryer);
+                if (detailscarryer) {
+                    const exist = detailscarryer.some(e => e === user.email)
+                    console.log(exist, 'exist');
+                    if (exist) {
+                        setTimeout(() => {
+                            setuserisok(true)
+                            setloading(false)
+                        }, 1000)
+
+                    }
+                }
+            }).catch(e => console.log(e))
+            // setTimeout(() => {
+            //     setuserisok(true)
+            //     setloading(false)
+            // }, 5000)
+        } else {
+            setuserisok(false)
+            setloading(false)
+        }
+        // }, 2000)
+
+    })
+    return subscribe
+}, [])

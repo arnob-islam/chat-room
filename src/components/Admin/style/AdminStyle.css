@@ -1,0 +1,39 @@
+section.my__admin__users.lsjweslfjw {
+  margin-top: 2rem;
+}
+
+.single_user_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  text-decoration: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #404040;
+}
+
+.main__wrapper_users.sljfwsdfw {
+  width: 80%;
+  margin: auto;
+}
+
+.img_container__ img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+
+.per_single {
+  padding: 0.5rem 1rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.per_single:hover {
+  background: whitesmoke;
+}
+/*# sourceMappingURL=AdminStyle.css.map */
