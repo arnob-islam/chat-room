@@ -22,12 +22,13 @@ export default function Animations() {
     const classes = useStyles();
     return (
         <div className={classes.root}>
-            <Skeleton width='40%' />
-            <Skeleton animation={false} width='50%' />
-            <Skeleton animation="wave" width='45%' />
-            <Skeleton animation="wave" width='40%' />
-            <Skeleton width="30%" />
-            <Skeleton width="100%" height={40} className={classes.writing_skeleton} />
+            <Skeleton width="100%" height={150} className={classes.writing_skeleton} />
+            <Skeleton width='80%' />
+            <Skeleton animation={false} width='100%' />
+            <Skeleton animation="wave" width='85%' />
+            <Skeleton animation="wave" width='90%' />
+            <Skeleton width="75%" />
+            <Skeleton width="100%" height={80} />
 
         </div>
     );
